@@ -17,7 +17,7 @@ namespace Task_A
         {
             Console.WriteLine($"Color:{Color} Brand:{Brand} Millage:{Millage}");
         }
-        public virtual void Drive()
+        public virtual void Drive(int m)
         {
             Console.WriteLine("Vehicle");   
         }

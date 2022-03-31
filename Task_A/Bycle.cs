@@ -14,7 +14,7 @@ namespace Task_A
         {
             return $"Color:{Color} Brand:{Brand} Millage:{Millage}";
         }
-        public override void Drive()
+        public override void Drive(int m)
         {
             Millage--;
         }

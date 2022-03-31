@@ -25,26 +25,28 @@ namespace Task_A
             Console.Write("Count:");
             int count = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Color:");
-            car.Color = Console.ReadLine();
-            Console.Write("Brand:");
-            car.Brand = Console.ReadLine();
-            Console.Write("FuelCapacity:");
-            car.FuelCapacity = Console.ReadLine();
-            Console.Write("CurrentFuel:");
-            car.CurrentFuel = Convert.ToInt32(Console.ReadLine());
-            Console.Write("FuelFor1km:");
-            car.FuelFor1km = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Millage:");
-            car.Millage = Convert.ToInt32(Console.ReadLine());
-
-
-            Vehicle vehicle = new Vehicle();
-            vehicle.Add(car);
-            foreach (var item in vehicle.GetArray())
+            for (int i = 0; i < count; i++)
             {
-                Console.WriteLine(item);
+                Console.Write("Color:");
+                car.Color = Console.ReadLine();
+                Console.Write("Brand:");
+                car.Brand = Console.ReadLine();
+                Console.Write("FuelCapacity:");
+                car.FuelCapacity = Console.ReadLine();
+                Console.Write("CurrentFuel:");
+                car.CurrentFuel = Convert.ToInt32(Console.ReadLine());
+                Console.Write("FuelFor1km:");
+                car.FuelFor1km = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Millage:");
+                car.Millage = Convert.ToInt32(Console.ReadLine());
+                Vehicle vehicle = new Vehicle();
+                vehicle.Add(car);
+                foreach (var item in vehicle.GetArray())
+                {
+                    Console.WriteLine(item);
+                }
             }
+
 
             Console.WriteLine("1. Maşınları millage-e göre filtirlə");
             Console.WriteLine("2. Bütün maşınları göstər");
@@ -53,11 +55,12 @@ namespace Task_A
 
             if (answer == 1)
             {
-                if (car.Millage > 100 && car.Millage < 500)
+                Console.WriteLine("Millage");
+                if (car.Millage > Convert.ToInt32(Console.ReadLine()) && car.Millage < Convert.ToInt32(Console.ReadLine()))
                 {
                     Vehicle vehicle1 = new Vehicle();
                     vehicle1.Add(car);
-                    foreach (var item in vehicle.GetArray())
+                    foreach (var item in vehicle1.GetArray())
                     {
                         Console.WriteLine(item);
                     }
@@ -71,6 +74,7 @@ namespace Task_A
             if (answer == 2)
             {
                 Console.WriteLine(car);
+                
             }
             if (answer == 3)
             {

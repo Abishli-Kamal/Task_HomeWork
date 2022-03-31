@@ -16,12 +16,12 @@ namespace Task_A
         {
             base.Showinfo();
         }
-        public override void Drive()
+        public override void Drive(int m)
         {
             if (CurrentFuel > 0)
             {
                 Millage++;
-                CurrentFuel=CurrentFuel-FuelFor1km;
+                CurrentFuel=CurrentFuel-m*FuelFor1km;
             }
             else
             {
